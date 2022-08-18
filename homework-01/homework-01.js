@@ -53,7 +53,7 @@ let result =`
 Чи сума є парним числом:          ${isEven}
 Решта з 500 грн:                  ${change}
 Середня ціна:                     ${averagePrice}
-Випадкова знижка:                 ${randomDiscount}
+Випадкова знижка:                 ${randomDiscount}%
 Сума, враховуючи знижку:          ${discountSum}
 Чистий прибуток:                  ${profit}
 `;
