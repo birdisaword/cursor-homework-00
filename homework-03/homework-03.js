@@ -50,7 +50,7 @@ function getRandomPassword(length = 8) {
 
 
 document.writeln(`Функція №1: ${getMaxDigit(34.534)} <br>`);
-document.writeln(`Функція №3: ${makeName('bubaSmith')} <br>`);
+document.writeln(`Функція №3: ${makeName('bubBaSmith')} <br>`);
 document.writeln(`Функція №4: ${(countSum(1000))} <br>`);
 document.writeln(`Функція №5: ${(getRandomNumber(1, 10))} <br>`);
 document.writeln(`Функція №7: ${(converter('2500uah'))} <br>`);
