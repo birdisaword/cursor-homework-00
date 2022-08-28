@@ -1,14 +1,14 @@
 // 1
 function getMaxDigit(number){
-    let int = String(number).replace('.', '').replace(',', '');
+    let int = String(number);
     return (Math.max(...int))
 };
-
 
 // 3
 function makeName(str) {
     return str[0].toUpperCase() + str.slice(1).toLowerCase();
 };
+
 
 
 // 4 
@@ -21,9 +21,10 @@ function countSum (salary) {
 
 
 // 5
-function getRandomNumber(N, M) {
-    return parseInt(Math.random() * (M - N) + N);
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
 };
+
 
 
 // 7
@@ -49,7 +50,7 @@ function getRandomPassword(length = 8) {
 
 
 
-document.writeln(`Функція №1: ${getMaxDigit(34.534)} <br>`);
+document.writeln(`Функція №1: ${getMaxDigit(348534)} <br>`);
 document.writeln(`Функція №3: ${makeName('bubBaSmith')} <br>`);
 document.writeln(`Функція №4: ${(countSum(1000))} <br>`);
 document.writeln(`Функція №5: ${(getRandomNumber(1, 10))} <br>`);
