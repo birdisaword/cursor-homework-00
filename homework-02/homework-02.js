@@ -17,7 +17,7 @@ while (isNaN(min) && isNaN(max)) {
 
 for (let i = minValue; i <= maxValue; i++) {
 
-let isEven = (i % 2 === 0);
+let isEven = i % 2 === 0;
 
    if (omitEvens && isEven) {
       continue
