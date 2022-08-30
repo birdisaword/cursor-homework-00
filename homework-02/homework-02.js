@@ -5,10 +5,10 @@ while (isNaN(min) && isNaN(max)) {
    max = prompt('enter maximum value'); 
 };
 
- minValue = parseInt(min);
+ let minValue = parseInt(min);
  console.log(minValue);
 
- maxValue = parseInt(max);
+ let maxValue = parseInt(max);
  console.log(maxValue);
 
  let omitEvens = confirm('omit even numbers?')
