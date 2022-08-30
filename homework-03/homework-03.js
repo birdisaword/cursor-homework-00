@@ -13,10 +13,10 @@ function makeName(str) {
 
 // 4 
 function countSum (salary) {
-    tax1 = 18;
-    tax2 = 1.5;
-    taxes = tax1 + tax2;
-    taxSum = salary / 100 * taxes
+   let tax1 = 18;
+   let tax2 = 1.5;
+   let taxes = tax1 + tax2;
+   let taxSum = salary / 100 * taxes
    return salary - taxSum;
 };
 
