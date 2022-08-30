@@ -1,30 +1,28 @@
-let n, m
+let min, max
 
-while (isNaN(n)) {
-    n = prompt('enter value N');  
+while (isNaN(min) && isNaN(max)) {
+   min = prompt('enter minimum value'); 
+   max = prompt('enter maximum value'); 
 };
- N = (parseInt(n));
-    console.log(N)
 
-while (isNaN(m)) {
-    m = prompt('enter value M');
-};
-M = (parseInt(m));
-    console.log(M)
+ minValue = parseInt(min);
+ console.log(minValue);
 
-let omitEvens = confirm('omit even numbers?')
-let sum = 0;
+ maxValue = parseInt(max);
+ console.log(maxValue);
 
-if (omitEvens){
-for(let i = N; i <= M; i++){
-    if(i % 2 == 1){
-        sum = sum + i;
-    }
-}
-console.log (sum)
-} else {
-    for(let i = N; i <= M; i++){
-        sum = sum + i;
-    }
-    console.log (sum)
-}
+ let omitEvens = confirm('omit even numbers?')
+ let sum = 0;
+
+
+for (let i = minValue; i <= maxValue; i++) {
+
+let isEven = (i % 2 === 0);
+
+   if (omitEvens && isEven) {
+      continue
+    } 
+      sum += i;
+   };
+
+console.log(sum)
