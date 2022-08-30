@@ -8,22 +8,22 @@ let thirdItem = 90.2345;
 console.log(thirdItem)
 
 
-let maxPrice = (Math.max(firstItem, secondItem, thirdItem));
+let maxPrice = Math.max(firstItem, secondItem, thirdItem);
 console.log(maxPrice)
 
-let minPrice = (Math.min(firstItem, secondItem, thirdItem));
+let minPrice = Math.min(firstItem, secondItem, thirdItem);
 console.log(minPrice)
 
 let sum = firstItem + secondItem + thirdItem;
 console.log(sum)
 
-let roundFloor = (Math.floor(firstItem) + Math.floor(secondItem) + Math.floor(thirdItem));
+let roundFloor = Math.floor(firstItem) + Math.floor(secondItem) + Math.floor(thirdItem);
 console.log(roundFloor)
 
-let roundSum = (Math.round(sum / 100) * 100);
+let roundSum = Math.round(sum / 100) * 100;
 console.log(roundSum)
 
-let isEven = !!(roundFloor % 2 == 0);
+let isEven = roundFloor % 2 == 0;
 console.log(isEven)
 
 let change = 500 - sum;
@@ -35,10 +35,13 @@ console.log(averagePrice)
 let randomDiscount = Math.floor(Math.random() * 100) + 1;
 console.log(randomDiscount)
 
-let discountSum = Number((sum - (sum / 100 * randomDiscount)).toFixed(2));
+let discount = sum / 100 * randomDiscount;
+let discountSum = Number((sum - discount).toFixed(2));
 console.log(discountSum) 
 
-let profit = (sum / 2) - (sum - discountSum);
+let primeCost = sum / 2;
+let cleanSum = sum - discountSum;
+let profit = primeCost - cleanSum;
 console.log(profit)
 
 let result =`

@@ -27,5 +27,5 @@ const marks = [4, 5, 5, 3, 4, 5];
 
 
 const mapper = new Map([['1', 'a'], ['2', 'b']]);
-console.log(Array.from(mapper.values()));
+Array.from(mapper.values());
 // ['a', 'b'];

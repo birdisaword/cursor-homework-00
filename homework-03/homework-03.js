@@ -1,7 +1,7 @@
 // 1
 function getMaxDigit(number){
     let int = String(number);
-    return (Math.max(...int))
+    return Math.max(...int)
 };
 
 // 3
@@ -16,7 +16,8 @@ function countSum (salary) {
     tax1 = 18;
     tax2 = 1.5;
     taxes = tax1 + tax2;
-   return salary - (salary / 100 * taxes);
+    taxSum = salary / 100 * taxes
+   return salary - taxSum;
 };
 
 
