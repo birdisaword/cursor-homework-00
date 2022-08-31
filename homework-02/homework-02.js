@@ -1,7 +1,10 @@
 let min, max
 
-while (isNaN(min) && isNaN(max)) {
-   min = prompt('enter minimum value'); 
+while (isNaN(min)) {
+   min = prompt('enter minimum value');  
+};
+
+while (isNaN(max)) {
    max = prompt('enter maximum value'); 
 };
 
@@ -16,7 +19,6 @@ while (isNaN(min) && isNaN(max)) {
 
 
 for (let i = minValue; i <= maxValue; i++) {
-
 let isEven = i % 2 === 0;
 
    if (omitEvens && isEven) {
