@@ -1,17 +1,9 @@
 let min, max
 
-while (isNaN(min)) {
-   min = prompt('enter minimum value');  
-};
-
-while (isNaN(max)) {
-   max = prompt('enter maximum value'); 
-};
-
- let minValue = parseInt(min);
+ let minValue = parseInt(prompt('enter minimum value'));
  console.log(minValue);
 
- let maxValue = parseInt(max);
+ let maxValue = parseInt(prompt('enter maximum value'));
  console.log(maxValue);
 
  let omitEvens = confirm('omit even numbers?')
