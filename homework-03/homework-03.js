@@ -1,7 +1,7 @@
 // 1
 function getMaxDigit(number){
-    const num = String(number);
-    return Math.max(...num)
+    const stringifiedNum = String(number);
+    return Math.max(...stringifiedNum)
 }
 
 
@@ -44,7 +44,6 @@ function converter(str) {
 
  // 8
 function getRandomPassword(length = 8) {
-  
     let max = Math.pow(10, length - 1);
     let min = Math.pow(10, length) - Math.pow(10, length - 1);
 
