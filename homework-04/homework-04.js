@@ -15,26 +15,26 @@ const fullInfo = [];
 
 // two arrays with girls and with boys
 
-function someFunc(arr) {
+function separateIdentities(arr) {
     for (let i = 0; i < arr.length; i++) {
 
       (arr[i].endsWith("а")) ? girls.push(arr[i]) : boys.push(arr[i]);
     }
   return [boys, girls]
 }
-console.log(someFunc(students))
+console.log(separateIdentities(students))
 
 
 // combined array - [girl, boy, g, b, etc]
 
-function filterGroup(arr1, arr2) {
+function alternateIdentities(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
      
  sortedList.push(arr1[i], arr2[i]);
     }
   return sortedList
 }
- console.log(filterGroup(girls, boys))
+ console.log(alternateIdentities(girls, boys))
 
  
 // arrays [girl, boy]
@@ -51,25 +51,25 @@ function filterGroup(arr1, arr2) {
 
 // array with pair - girl, boy and their theme
 
- function pairAndTheme(arr1, arr2) {
+ function makePairAndTheme(arr1, arr2) {
     for (let i = 0; i < arr1.length; i ++) {
         namesAndTheme.push([arr2[i].join(" і "), String(arr1.slice(i, i + 1))])
     }
   return namesAndTheme;
  }
-console.log(pairAndTheme(themes, pairs))
+console.log(makePairAndTheme(themes, pairs))
 
 
 // students and their marks
 
-function marksForStudents(arr1, arr2) {
+function rateStudents(arr1, arr2) {
     const marked = [];
     for (let i = 0; i < arr1.length; i ++) {
         marked.push([arr1[i], arr2[i]])
     }
   return marked
 }
-console.log(marksForStudents(students, marks))
+console.log(rateStudents(students, marks))
 
  
 // pair of students, their theme and random mark
