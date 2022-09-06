@@ -2,11 +2,11 @@ let min, max
 
 
 while (isNaN(min)) {
-   min = prompt('enter minimum value');
+   min = parseInt(prompt('enter minimum value'));
 };
 
 while (isNaN(max)) {
-   max = prompt('enter maximum value'); 
+   max = parseInt(prompt('enter maximum value')); 
 };
  
  console.log(min);
@@ -22,6 +22,6 @@ let isEven = i % 2 === 0;
    if (omitEvens && isEven) {
       continue 
     } 
-      sum += Number(i);
+      sum += i;
    };
    console.log(sum)

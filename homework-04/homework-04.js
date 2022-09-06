@@ -21,7 +21,7 @@ function separateIdentities(arr) {
     for (let i = 0; i < arr.length; i++) {
 
       if (arr[i].endsWith("а")) {
-        
+
          girls.push(arr[i]) 
        } else {
         boys.push(arr[i]);
@@ -34,6 +34,8 @@ console.log(separateIdentities(students))
 // combined array - [girl, boy, g, b, etc]
 
 function alternateIdentities(arr1, arr2) {
+
+  
     for (let i = 0; i < arr1.length; i++) {
      
  sortedList.push(arr1[i], arr2[i]);
