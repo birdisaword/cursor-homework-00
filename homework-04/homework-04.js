@@ -6,8 +6,8 @@ const marks = [4, 5, 5, 3, 4, 5];
 const students = ["Олександр", "Ігор", "Олена", "Іра", "Олексій", "Світлана"];
 
 
-let girls = []
-let boys = []
+// let girls = []
+// let boys = []
 let sortedList = []
 const pairs = [];
 const namesAndTheme = [];
@@ -16,10 +16,16 @@ const fullInfo = [];
 // two arrays with girls and with boys
 
 function separateIdentities(arr) {
+  let girls = []
+  let boys = []
     for (let i = 0; i < arr.length; i++) {
 
-      (arr[i].endsWith("а")) ? girls.push(arr[i]) : boys.push(arr[i]);
-    }
+      if (arr[i].endsWith("а")) {
+        
+         girls.push(arr[i]) 
+       } else {
+        boys.push(arr[i]);
+      }}
   return [boys, girls]
 }
 console.log(separateIdentities(students))

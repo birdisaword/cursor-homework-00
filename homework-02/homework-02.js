@@ -2,11 +2,11 @@ let min, max
 
 
 while (isNaN(min)) {
-   (min = prompt('enter minimum value'));
+   min = prompt('enter minimum value');
 };
 
 while (isNaN(max)) {
-   (max = prompt('enter maximum value')); 
+   max = prompt('enter maximum value'); 
 };
  
  console.log(min);
