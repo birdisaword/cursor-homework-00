@@ -15,16 +15,16 @@ const fullInfo = [];
 
 // two arrays with girls and with boys
 
-function separateIdentities(arr) {
+function separateIdentities(arrOfPeople) {
   let girls = []
   let boys = []
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arrOfPeople.length; i++) {
 
-      if (arr[i].endsWith("а")) {
+      if (arrOfPeople[i].endsWith("а")) {
 
-         girls.push(arr[i]) 
+        girls.push(arrOfPeople[i]) 
        } else {
-        boys.push(arr[i]);
+        boys.push(arrOfPeople[i]);
       }}
   return [boys, girls]
 }
@@ -33,12 +33,11 @@ console.log(separateIdentities(students))
 
 // combined array - [girl, boy, g, b, etc]
 
-function alternateIdentities(arr1, arr2) {
+function alternateIdentities(arrOfGirls, arrOfBoys) {
 
-  
-    for (let i = 0; i < arr1.length; i++) {
+    for (let i = 0; i < arrOfGirls.length; i++) {
      
- sortedList.push(arr1[i], arr2[i]);
+ sortedList.push(arrOfGirls[i], arrOfBoys[i]);
     }
   return sortedList
 }
