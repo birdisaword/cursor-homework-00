@@ -46,7 +46,7 @@ console.log('mode: ' + getModa(getRandomArray(14, 1, 10)))
 
     if (Number.isInteger(arrOfNums[i])) {
     let sumOfNums = arrOfNums.reduce((a, b) => a + b, 0); 
-    averageNum = Math.floor(sumOfNums / arrOfNums.length);
+    averageNum = sumOfNums / arrOfNums.length;
       }
     return averageNum
     }
