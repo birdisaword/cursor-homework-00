@@ -6,86 +6,77 @@ const marks = [4, 5, 5, 3, 4, 5];
 const students = ["Олександр", "Ігор", "Олена", "Іра", "Олексій", "Світлана"];
 
 
-// let girls = []
-// let boys = []
-let sortedList = []
-const pairs = [];
-const namesAndTheme = [];
-const fullInfo = [];
+// pairs of students
 
-// two arrays with girls and with boys
-
-function separateIdentities(arrOfPeople) {
-  let girls = []
-  let boys = []
+  function makePairs(arrOfPeople) {
+    const sortedList = []
+    const girls = []
+    const boys = []
+    const pairs = []
+  
     for (let i = 0; i < arrOfPeople.length; i++) {
 
       if (arrOfPeople[i].endsWith("а")) {
-
-        girls.push(arrOfPeople[i]) 
+      girls.push(arrOfPeople[i]) 
        } else {
-        boys.push(arrOfPeople[i]);
-      }}
-  return [boys, girls]
-}
-console.log(separateIdentities(students))
-
-
-// combined array - [girl, boy, g, b, etc]
-
-function alternateIdentities(arrOfGirls, arrOfBoys) {
-
-    for (let i = 0; i < arrOfGirls.length; i++) {
-     
- sortedList.push(arrOfGirls[i], arrOfBoys[i]);
+      boys.push(arrOfPeople[i])
+      }
     }
-  return sortedList
-}
- console.log(alternateIdentities(girls, boys))
-
- 
-// arrays [girl, boy]
-
- function makePairs(arr) {
-     for (let i = 0; i < arr.length; i += 2) {
-         const sortedList = arr.slice(i, i + 2);
-         pairs.push(sortedList);
-     }
-   return pairs;
- }
- console.log(makePairs(sortedList))
+    
+    for (let i = 0; i < girls.length; i++) {
+      sortedList.push(girls[i], boys[i]);
+    }
+    
+    for (let i = 0; i < sortedList.length; i += 2) {
+      const sorted = sortedList.slice(i, i + 2);
+      pairs.push(sorted);
+    }
+      return pairs;
+   }
+  
+ console.log(makePairs(students))
 
 
-// array with pair - girl, boy and their theme
+// array - girl, boy and their theme
 
- function makePairAndTheme(arr1, arr2) {
-    for (let i = 0; i < arr1.length; i ++) {
-        namesAndTheme.push([arr2[i].join(" і "), String(arr1.slice(i, i + 1))])
+  function makePairAndTheme(theme, pair) {
+    const namesAndTheme = [];
+
+    for (let i = 0; i < theme.length; i ++) {
+      namesAndTheme.push([pair[i].join(" і "), theme[i]])
     }
   return namesAndTheme;
- }
-console.log(makePairAndTheme(themes, pairs))
+  }
+
+  console.log(makePairAndTheme(themes, makePairs(students)))
 
 
 // students and their marks
 
-function rateStudents(arr1, arr2) {
+  function rateStudents(student, mark) {
     const marked = [];
-    for (let i = 0; i < arr1.length; i ++) {
-        marked.push([arr1[i], arr2[i]])
+
+    for (let i = 0; i < student.length; i ++) {
+      marked.push([student[i], mark[i]])
     }
   return marked
-}
+  }
+
 console.log(rateStudents(students, marks))
 
  
 // pair of students, their theme and random mark
 
-function addFullInfo(arr) {
-    for (let i = 0; i < arr.length; i ++) {
-     let randomMark = Math.floor(Math.random()*5 + 1); 
-     fullInfo.push([String(arr[i]), String(randomMark)])
+  function addFullInfo(pairAndTheme) {
+    const fullInfo = [];
+    const minMark = 1;
+    const maxMark = 5;
+
+    for (let i = 0; i < pairAndTheme.length; i ++) {
+      let randomMark = Math.floor(Math.random() * maxMark + minMark); 
+      fullInfo.push([String(pairAndTheme[i]), String(randomMark)])
     }
-   return fullInfo
-}
-console.log(addFullInfo(namesAndTheme))
+    return fullInfo
+  }
+
+console.log(addFullInfo(makePairAndTheme(themes, makePairs(students))))

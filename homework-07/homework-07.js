@@ -34,21 +34,21 @@ console.log(getMiddleTaxes.call(litva))
 
   // 4 об'єкт виду: { salary: number, taxes: number, profit: number } - кожні 10 секунд
 
-  function getMySalary(country) {
+function getMySalary(country) {
 
-    setInterval(function() {
+  setInterval(function() {
 
-    const salary = Math.floor(Math.random() * (2000 - 1500)) + 1500;
-    const tax = +getMyTaxes.call(country, salary).toFixed(2);
-    const profit = +(salary - tax).toFixed(2);
+  const salary = Math.floor(Math.random() * (2000 - 1500)) + 1500;
+  const tax = +getMyTaxes.call(country, salary).toFixed(2);
+  const profit = +(salary - tax).toFixed(2);
 
-      console.log({ 
-      salary: salary, 
-      taxes: tax, 
-      profit: profit 
-      })
+    console.log({ 
+    salary: salary, 
+    taxes: tax, 
+    profit: profit 
+    })
 
-    }, 10000);    
-  }
+  }, 10000);    
+}
 
 console.log(getMySalary(ukraine))
