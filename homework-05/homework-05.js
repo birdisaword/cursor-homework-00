@@ -95,9 +95,11 @@ console.log('count of positive numbers: ' + countPositiveNumbers(-2, 3, 6, -6, 4
   function getDividedByFive(arrOfNums) {
     const dividedByFiveNums = arrOfNums.filter(filterArr);
 
-    function filterArr(value) {
-      return value % 5 === 0;
-    }
+    const filterArr = value => value % 5 === 0;
+    
+    // function filterArr(value) {
+    //   return value % 5 === 0;
+    // }
   return dividedByFiveNums
   }
 

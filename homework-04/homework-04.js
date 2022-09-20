@@ -17,21 +17,16 @@ const students = ["Олександр", "Ігор", "Олена", "Іра", "О�
     for (let i = 0; i < arrOfPeople.length; i++) {
 
       if (arrOfPeople[i].endsWith("а")) {
-      girls.push(arrOfPeople[i]) 
-       } else {
-      boys.push(arrOfPeople[i])
+        girls.push(arrOfPeople[i]) 
+      } else {
+        boys.push(arrOfPeople[i])
       }
     }
-    
+
     for (let i = 0; i < girls.length; i++) {
-      sortedList.push(girls[i], boys[i]);
+      pairs.push([girls[i], boys[i]])
     }
-    
-    for (let i = 0; i < sortedList.length; i += 2) {
-      const sorted = sortedList.slice(i, i + 2);
-      pairs.push(sorted);
-    }
-      return pairs;
+    return pairs;
    }
   
  console.log(makePairs(students))

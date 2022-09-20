@@ -17,11 +17,12 @@ while (isNaN(max)) {
 
 
 for (let i = min; i <= max; i++) {
-let isEven = i % 2 === 0;
+   let isEven = i % 2 === 0;
 
    if (omitEvens && isEven) {
       continue 
     } 
       sum += i;
    };
+   
    console.log(sum)
