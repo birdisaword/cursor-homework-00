@@ -60,12 +60,12 @@ console.log(getAverageMark(students[0]))
 // function displaySummary({ name, scores: { maths = 0, english = 0, science = 0 } })
 
 
-  function getStudentInfo({name, course}) {
+  function getStudentInfo({name, course, ...rest}) {
 
     let studentsInfo = {
       name,
       course,
-      averageMark: getAverageMark(obj)
+      averageMark: getAverageMark(rest)
     }
   return studentsInfo
   }
