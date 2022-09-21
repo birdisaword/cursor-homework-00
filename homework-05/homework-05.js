@@ -13,13 +13,15 @@
 console.log(getRandomArray(14, 1, 10))
 
 
+  function sortInt(obj) {
+    return [obj].filter(n => Number.isInteger(n));
+  }
+
 // 2 мода всіх переданих аргументів
 
   function getModa(...numbers) {
-    const objOfNums = {};
-    const arrOfNums = [...numbers]. filter(n => Number.isInteger(n));
-    
-    arrOfNums.forEach((el) => {
+    const objOfNums = {};    
+    sortInt(...numbers).forEach((el) => {
       if (objOfNums[el]) {
         objOfNums[el] += 1
       } else {
@@ -59,7 +61,6 @@ console.log('average number: ' +  getAverage(2, 5, 3, 7, 8, 35, 2))
 // 4 медіана всіх переданих аргументів
 
   function getMedian(...numbers) {
-    let i = 0;
     const arrOfNums = [...numbers]. filter(n => Number.isInteger(n));
     let sortedArr = arrOfNums.sort((a, b) => a - b);
     let len = sortedArr.length;
@@ -83,16 +84,12 @@ console.log('median: ' + getMedian(43, 7, 25, 9, 8, 67, 14, 3))
   function countPositiveNumbers(...numbers) {
     let positiveNums = [];
     let finalCount;
-    let arr = [...numbers];
-
-    arr.forEach((el) => {
+    numbers.filter(function (el) {
       if (el >= 0) {
-        positiveNums.push(el)
+        return positiveNums.push(el);
       }
-    });
-    finalCount = positiveNums.length
-    
-    return finalCount
+    })
+    return positiveNums.length
   }
        
 console.log('count of positive numbers: ' + countPositiveNumbers(-2, 6, 34, 6, -6, -7, 3, -9))
@@ -101,9 +98,7 @@ console.log('count of positive numbers: ' + countPositiveNumbers(-2, 6, 34, 6, -
 // 7 елементи, які діляться націло на 5
 
   function getDividedByFive(...numbers) {
-    const filterArr = value => value % 5 === 0;
-    const dividedByFiveNums = [...numbers].filter(filterArr);
-    return dividedByFiveNums
+    return numbers.filter(value => value % 5 === 0)
   }
 
 console.log('divided by five: ' + getDividedByFive(5, 2, 7, 6, 9, 15))
