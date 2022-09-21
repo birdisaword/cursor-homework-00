@@ -36,9 +36,7 @@ console.log(getMiddleTaxes.call(litva))
     function getMySalary(country) {
       let timer = 0;
       let timerId = setInterval(() => {
-        minSalary = 1500;
-        maxSalary = 2000;
-        const salary = getRandomNumber();
+        const salary = getRandomNumber(1500, 2000);
         const tax = +getMyTaxes.call(country, salary).toFixed(2);
         const profit = +(salary - tax).toFixed(2);
         console.log({ 
@@ -51,8 +49,8 @@ console.log(getMiddleTaxes.call(litva))
           }
           timer++
         }, 10000)
-        getRandomNumber = () => Math.floor(Math.random() * (maxSalary - minSalary)) + minSalary;
+      
     }
     getMySalary(ukraine)
 
-    
+    const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
