@@ -25,14 +25,37 @@
   class Student {
 
     constructor(university, course, fullName) {
-       this.university = university;
+      this.university = university;
       this.course = course;
-      this.fullName = fullName
+      this.fullName = fullName;
+      this.marks
     }
     getInfo() {
-      return `Студент ${this.course}го курсу, ${this.university}, ${this.fullName}`
+      return `Студент ${this.course}го курсу, ${this.university}, ${this.fullName}, ${this.marks}`
     }
     
+    get newMark() {
+      return this.marks;
+    }
+  
+    set newMark(value) {
+      this.marks += [value]
+    }
+
+  //   Object.defineProperty(Student, "addMark", {
+  //     get : function () {
+  //         return this.mark;
+  //     }
+  // });
+  
+  // // setting property
+  // Object.defineProperty(Student, "addMark", {
+  //     set : function (value) {
+  //         this.mark = value;
+  //     }
+  // });
+
+
     // getMarks() {
     //   let marksArr = [];
     //   return marksArr.push(marks);
@@ -54,30 +77,15 @@
   // }
   }
 
- 
-  
-      
-
     
   let student1 = new Student('Вища Школа Психотерапії м.Одеса', '1', 'Остап Бендер');
   console.log(student1)
 
- Object.defineProperty(student1, "marks", {
-    get : function () {
-        return this.mark;
-    }
-});
 
-// setting property
-Object.defineProperty(student1, "addMark", {
-    set : function (value) {
-        this.mark = value;
-    }
-});
 
-  student1.addMark = "3";
-  student1.addMark = "5";
-  console.log(student1.marks);
+  student1.newMark = "3";
+  student1.newMark = "5";
+ 
 
   console.log(student1.getInfo())
 

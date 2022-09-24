@@ -14,14 +14,15 @@ console.log(getRandomArray(14, 1, 10))
 
 
   function sortInt(obj) {
-    return [obj].filter(n => Number.isInteger(n));
+    return obj.filter(n => Number.isInteger(n));
   }
 
 // 2 мода всіх переданих аргументів
 
   function getModa(...numbers) {
+    const sortedInt =  sortInt(numbers);
     const objOfNums = {};    
-    sortInt(...numbers).forEach((el) => {
+    sortedInt.forEach((el) => {
       if (objOfNums[el]) {
         objOfNums[el] += 1
       } else {
@@ -82,12 +83,8 @@ console.log('median: ' + getMedian(43, 7, 25, 9, 8, 67, 14, 3))
 // 6 кількість чисел більших 0
 
   function countPositiveNumbers(...numbers) {
-    let positiveNums = [];
-    let finalCount;
-    numbers.filter(function (el) {
-      if (el >= 0) {
-        return positiveNums.push(el);
-      }
+    const positiveNums = numbers.filter(function (el) {
+      return el >=0;
     })
     return positiveNums.length
   }
