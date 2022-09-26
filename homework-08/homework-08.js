@@ -1,26 +1,4 @@
 
-  // const student1 = {
-  //   university = 'Вища Школа Психотерапії м.Одеса',
-  //   course = '1',
-  //   fullName = 'Остап Бендер'
-  // }
-
-  // class User {
-
-  //   constructor(name) {
-  //     this.name = name;
-  //   }
-  
-  //   sayHi() {
-  //     alert(this.name);
-  //   }
-  // }
-  // // Использование:
-  // let user = new User("Иван");
-  // console.log(user);
-  // user.sayHi();
-
-
 
   class Student {
 
@@ -28,20 +6,20 @@
       this.university = university;
       this.course = course;
       this.fullName = fullName;
-      this.marks
+      // this.marks
     }
     getInfo() {
       return `Студент ${this.course}го курсу, ${this.university}, ${this.fullName}, ${this.marks}`
     }
     
-    get newMark() {
-      return this.marks;
-    }
+    get getMarks() {
+      return this.setMarks;
+   }
   
-    set newMark(value) {
-      this.marks += [value]
+    set setMarks(value) {
+      const marksArr = [];
+     this.setMarks = marksArr.push(value)
     }
-
   //   Object.defineProperty(Student, "addMark", {
   //     get : function () {
   //         return this.mark;
@@ -83,8 +61,8 @@
 
 
 
-  student1.newMark = "3";
-  student1.newMark = "5";
+  // Student.marks = "3";
+  student1.setMarks = "5";
  
 
   console.log(student1.getInfo())
