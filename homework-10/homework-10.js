@@ -7,5 +7,8 @@ const buttonSpace = document.getElementById('space-button')
 buttonA.addEventListener('click', someFunc);
 
 function someFunc(e) {
+  if (e.target.value = 'a'){
+    
+  }
 console.log( {value: e.target.value} )
 }
