@@ -4,11 +4,18 @@ const buttonD = document.getElementById('d-button')
 const buttonF = document.getElementById('f-button')
 const buttonSpace = document.getElementById('space-button')
 
-buttonA.addEventListener('click', someFunc);
+// const audioA = ('./audio/audio1.mp3')
+
+buttonA.addEventListener('keydown', someFunc);
 
 function someFunc(e) {
   if (e.target.value = 'a'){
-    
+    console.log({value: e.target.value})
+    play1()
   }
-console.log( {value: e.target.value} )
+}
+
+
+function play1() {
+  audio1.play();
 }
