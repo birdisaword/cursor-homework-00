@@ -1,21 +1,22 @@
-const buttonA = document.getElementById('a-button')
-const buttonS = document.getElementById('s-button')
-const buttonD = document.getElementById('d-button')
-const buttonF = document.getElementById('f-button')
-const buttonSpace = document.getElementById('space-button')
 
-// const audioA = ('./audio/audio1.mp3')
+const keys = document.querySelectorAll('.key');
 
-buttonA.addEventListener('keydown', someFunc);
+function playNote(e){
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
+          key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 
-function someFunc(e) {
-  if (e.target.value = 'a'){
-    console.log({value: e.target.value})
-    play1()
-  }
+    if(!key) return;
+
+    key.classList.add('playing');
+    audio.currentTime = 0;
+    audio.play();
 }
 
-
-function play1() {
-  audio1.play();
+function removeTransition(e){
+    if(e.propertyName !== 'transform') return;
+    this.classList.remove('playing');
 }
+
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+window.addEventListener('keydown', playNote);
