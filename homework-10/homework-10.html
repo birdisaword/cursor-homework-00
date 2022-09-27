@@ -1,67 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="homework-10.css"> -->
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='homework-10.css'>
   <title>homework-10</title>
 </head>
 <body>
+  
+  <div data-key='q' class='key'></div>
+  <div data-key='w' class='key'></div>
+  <div data-key='e' class='key'></div>
+  <div data-key='r' class='key'></div>
+  <div data-key='t' class='key'></div>
+  <div data-key='y' class='key'></div>
+  <div data-key='u' class='key'></div>
 
+  <div class='hints'>
+    <p> Q E T R E U Y R E T R W R Q </p>
+  </div> 
 
+  <audio data-key='q'  src='./audio/tune_1.mp3'></audio>
+  <audio data-key='w'  src='./audio/tune_7.mp3'></audio>
+  <audio data-key='e'  src='./audio/tune_2.mp3'></audio>
+  <audio data-key='r'  src='./audio/tune_4.mp3'></audio>
+  <audio data-key='t'  src='./audio/tune_3.mp3'></audio>
+  <audio data-key='y'  src='./audio/tune_6.mp3'></audio>
+  <audio data-key='u'  src='./audio/tune_5.mp3'></audio>
+ 
+  <div class='bg-container'></div>
 
-  <section id="wrap">
-
-    <section id="main">
-      <div class="nowplaying"></div>
-      <div class="keys">
-
-        <div data-key="81" class="key" data-note="A">
-          <!-- <span class="hints">q</span> -->
-      </div>
-      
-      <div data-key="87" class="key" data-note="B">
-        <!-- <span class="hints">w</span> -->
-      </div>
-      
-      <div data-key="69" class="key" data-note="C">
-        <!-- <span class="hints">e</span> -->
-      </div>
-      
-      <div data-key="82" class="key" data-note="D">
-        <!-- <span class="hints">r</span> -->
-      </div>
-      
-      <div data-key="84" class="key" data-note="E">
-        <!-- <span class="hints">t</span> -->
-      </div>
-      
-      <div data-key="89" class="key" data-note="F">
-        <!-- <span class="hints">y</span> -->
-      </div>
-      
-      <div data-key="85" class="key" data-note="G">
-        <!-- <span class="hints">u</span> -->
-      </div>
-      </div>
-
-     
-      <audio data-key="81"  src="./audio/tune_1.mp3"></audio>
-      <audio data-key="87"  src="./audio/tune_7.mp3"></audio>
-      <audio data-key="69"  src="./audio/tune_2.mp3"></audio>
-      <audio data-key="82"  src="./audio/tune_4.mp3"></audio>
-      <audio data-key="84"  src="./audio/tune_3.mp3"></audio>
-      <audio data-key="89"  src="./audio/tune_6.mp3"></audio>
-      <audio data-key="85"  src="./audio/tune_5.mp3"></audio>
-      </section>
-  </section>
-
-  <video playsinline autoplay muted loop id="bgvid" >
-    <source src="./background/video_1.mp4" type="video/mp4">
-</video>
-<!-- <img class="bgimg" src="./background/paper.png"> -->
-
-  <script src="homework-10.js"></script>
+  <script src='homework-10.js'></script>
 </body>
 </html>
