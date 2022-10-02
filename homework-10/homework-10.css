@@ -14,7 +14,6 @@ html, body {
 }
 
 .hints {
- 
   display: inline-block;
   width: 100%;
   opacity: 0;
@@ -29,4 +28,19 @@ html, body {
 
 .hints:hover {
   opacity: 0.9;
+}
+
+.key {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 15%;
+  border: solid brown 2px;
+  margin: 0 10px;
+  font-size: 30px;
+}
+
+.key-container {
+  text-align: center;
+  
 }

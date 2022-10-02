@@ -54,5 +54,6 @@ console.log(getMiddleTaxes.call(litva))
     getMySalary(ukraine)
 
     function getRandomNumber(min, max) {
-       Math.floor(Math.random() * (max - min)) + min;
+       const randomNum = Math.floor(Math.random() * (max - min)) + min;
+       return randomNum
     }
