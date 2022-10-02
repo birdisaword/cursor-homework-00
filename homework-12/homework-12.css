@@ -1,0 +1,26 @@
+/* 
+#character {
+  height: 110px;
+  border: solid green 1px
+} */
+
+
+.charImg {
+  border-radius: 50%;
+  border: solid red 3px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  padding: 80px, 0 80px 0;
+  object-fit: cover;
+}
+
+.charCard {
+  /* margin: 10px; */
+  border: solid red 3px;
+  align-items: center; 
+  justify-content: left;
+  display: inline-block;
+  width: 80%
+}
+
