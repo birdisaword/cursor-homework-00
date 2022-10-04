@@ -9,21 +9,18 @@ function playSound(e) {
   }
   sound.currentTime = 0;
   sound.play();
- key.classList.add('active')
+
+  key.classList.add('active');
   setTimeout(() => {
     key.classList.remove('active')
   }, "100")
- 
-  
 }
 
 function removeTransition(e) {
   if(e.propertyName !== 'transform') {
     return
   }
- 
 }
 
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-
 window.addEventListener('keydown', playSound);
