@@ -51,15 +51,8 @@ html, body {
   box-shadow: 2px 1px #ab955c;
 }
 
-/* .key:not(:empty) {
-  font-weight: bold;
-  font-size: 30px;
-  padding-top: 15px
-}  */
-
 .key-container {
   text-align: center;
-  
   position: absolute;
   bottom: 20%;
   width: 50%;
