@@ -11,6 +11,7 @@ html, body {
   background-size: cover;
   width: 100%;
   height: 100%; 
+  position: relative
 }
 
 .hints {
@@ -32,15 +33,35 @@ html, body {
 
 .key {
   display: inline-block;
+  background-color: #faefab;
   height: 50px;
   width: 50px;
   border-radius: 15%;
-  border: solid brown 2px;
-  margin: 0 10px;
+  border: solid #ab955c 1px;
+  margin: 0 15px;
+  box-shadow: 5px 5px #ab955c;
   font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color:rgb(83, 29, 29);
 }
+
+.active {
+  transform: translateY(3px);
+  background-color: #ece29f;
+  box-shadow: 2px 1px #ab955c;
+}
+
+/* .key:not(:empty) {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 15px
+}  */
 
 .key-container {
   text-align: center;
   
+  position: absolute;
+  bottom: 20%;
+  width: 50%;
+  margin-left: 25%
 }
