@@ -6,7 +6,7 @@ async function generalInfo(moviePart) {
   const fullInfo = response.characters;
   const link = fullInfo;
   // const link = ('https://swapi.dev/api/people/' + [charIndex] + '/')
-  console.log(link);
+  // console.log(link);
 
   
 link.forEach(el => {
@@ -17,12 +17,32 @@ link.forEach(el => {
 
 
 
+const arr1 = link
+const arr2 = ['Tom', 30, 'Chile'];
+
+const obj = {};
+
+arr1.forEach((element, index) => {
+  obj[element] = arr2[index];
+});
+
+// 👉️ {name: 'Tom', age: 30, country: 'Chile'}
+console.log(obj);
+
+
+
+
+const photos = {
+  // ключ=посилання_на_персонажа, значення=посилання_на_фотку
+  
+}
+
   Promise.all(link.map(url =>
     fetch(url)              
      .then(response => response.json())
   ))
   .then(function(data) {
-    console.log(data);
+    // console.log(data);
   
     data.forEach(el => {
     //  console.log(imgIndex);
@@ -30,7 +50,7 @@ link.forEach(el => {
     let charImg = document.createElement('img');
     charImg.className = "charImg";
     charImg.src = 'https://starwars-visualguide.com/assets/img/characters/' + [charIndex] + '.jpg';
-    console.log(charIndex);
+    // console.log(charIndex);
 
       let character = document.getElementById('character');
       let charCard = document.createElement('div');

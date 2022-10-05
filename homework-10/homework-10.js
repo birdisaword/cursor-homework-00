@@ -1,3 +1,4 @@
+
 const keys = document.querySelectorAll('.key');
 
 function playSound(e) {
@@ -9,18 +10,12 @@ function playSound(e) {
   }
   sound.currentTime = 0;
   sound.play();
-
-  key.classList.add('active');
+ 
+  key.classList.toggle('active');
   setTimeout(() => {
-    key.classList.remove('active')
+    key.classList.toggle('active')
   }, "100")
 }
 
-function removeTransition(e) {
-  if(e.propertyName !== 'transform') {
-    return
-  }
-}
-
-keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 window.addEventListener('keydown', playSound);
+
