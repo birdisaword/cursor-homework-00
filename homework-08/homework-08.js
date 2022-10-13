@@ -40,7 +40,6 @@
   }
     
   let student1 = new Student('Вища Школа Психотерапії м.Одеса', '1', 'Остап Бендер', [4, 5, 4]);
-  console.log(student1)
 
   student1.newMarks = 5;
   student1.newMarks = 3;
