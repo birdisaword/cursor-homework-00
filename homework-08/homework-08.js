@@ -1,100 +1,62 @@
 
 
   class Student {
-
-    constructor(university, course, fullName) {
+    constructor(university, course, fullName, mark) {
       this.university = university;
       this.course = course;
       this.fullName = fullName;
-      // this.marks
+      this.marks = mark;
     }
+    
     getInfo() {
       return `Студент ${this.course}го курсу, ${this.university}, ${this.fullName}, ${this.marks}`
     }
     
-    get getMarks() {
-      return this.setMarks;
-   }
-  
-    set setMarks(value) {
-      const marksArr = [];
-     this.setMarks = marksArr.push(value)
+    get newMarks() {
+      if (!this.dismiss) {
+        return this.marks
+      }
     }
-  //   Object.defineProperty(Student, "addMark", {
-  //     get : function () {
-  //         return this.mark;
-  //     }
-  // });
+
+    set newMarks(mark) {
+      if (!this.dismiss) {
+        return this.marks.push(mark);
+      }
+    }
+
+    getAverageMark() {
+      const sum = this.marks.reduce((a, b) => a + b, 0)
+      const average = (sum / this.marks.length).toFixed(1)
+      return average
+    }
+
+    getDismissed() {
+      this.dismiss = true;
+    }
   
-  // // setting property
-  // Object.defineProperty(Student, "addMark", {
-  //     set : function (value) {
-  //         this.mark = value;
-  //     }
-  // });
-
-
-    // getMarks() {
-    //   let marksArr = [];
-    //   return marksArr.push(marks);
-    // }
-
-    // setMarks(value) {
-    //   this.marks = value;
-    //   return value;
-    // }
-
-
-  //   get marks() {
-      
-  //     return this.marks;
-  //   };
-  
-  //   set addMark(newMark) {
-  //     this.marks = newMark;
-  // }
+    getRecovered() {
+      this.dismiss = false;
+    }
   }
-
     
-  let student1 = new Student('Вища Школа Психотерапії м.Одеса', '1', 'Остап Бендер');
+  let student1 = new Student('Вища Школа Психотерапії м.Одеса', '1', 'Остап Бендер', [4, 5, 4]);
   console.log(student1)
 
 
+  student1.newMarks = 5;
+  student1.newMarks = 3;
 
-  // Student.marks = "3";
-  student1.setMarks = "5";
- 
+  student1.getDismissed()
+  
+  student1.newMarks = 2;
+  student1.newMarks = 1;
+
+  student1.getRecovered()
+
+  student1.newMarks = 2;
+  student1.newMarks = 3;
+  
+  console.log('average mark: ' + student1.getAverageMark())
 
   console.log(student1.getInfo())
 
- 
-
-   
-
- 
-      
-    // getAverageMark() {
-    //   let sumOfMarks = this.marks.reduce((a, b) => a + b, 0); 
-    //   let averageMark = sumOfMarks / this.marks.length;
-    //   return averageMark
-    // }
-
-    // // dismiss() {
-    // //   if (dismiss) {
-    // //     this.marks = null;
-    // //   }
-    // // }
-
-    // // recover() {
-    // //   if (recover) {
-    // //     !dismiss
-    // //   }
-    // // }
-
-  // }
-  
-
-  // const student = new Student ('Вища Школа Психотерапії м.Одеса', '1', 'Остап Бендер')
-
-  // // Студент 1го курсу Вищої Школи Психотерапії м.Одеса, Остап Родоманський Бендер
-  // console.log(student.getInfo())
