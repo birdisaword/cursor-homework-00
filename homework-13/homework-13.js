@@ -17,14 +17,17 @@ console.log(idGenerator.next().value);
 
 // завдання 2
 
-function *newFontGenerator(size) {
+function* newFontGenerator(size) {
   let step = 2
   while (size){
       let current = yield size
-      current === "up"? size = size + step: true
-      current === "down"? size = size - step: true
-  }
-} 
+      if (current === "up") {
+        size = size + step
+      } else if (current === "down") {
+        size = size - step
+      }
+    }
+  } 
  
 const fontGenerator = newFontGenerator(14);
 
