@@ -7,7 +7,7 @@
     })
 
     function convertToChinese() {
-      const lastFiveNumbers = [Date.now()].join().slice(-5)
+      const lastFiveNumbers = Date.now().toString()
       const numsToChinese = String.fromCharCode(lastFiveNumbers)
       return numsToChinese
     }
