@@ -28,9 +28,6 @@ img.setAttribute("src", Image)
 document.body.append(img)
 document.getElementById("bg-img").style.backgroundSize = "100px 50px";
 
-import { getRandomChinese } from "../../../homework-11/homework-11.js"
-console.log(getRandomChinese(4));
-
 const container = document.querySelector('.container')
 const grid = document.querySelector('.grid')
 import { generateBlocksInterval } from "../../../homework-09/homework-09.js"

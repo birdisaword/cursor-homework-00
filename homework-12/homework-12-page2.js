@@ -27,12 +27,13 @@ const fetchData = async () => {
 // array with links to photos
   function makeArr() {
     const linkArr2 = []
-    for (let i=1; i<60; i++) {
+    for (let i=2; i<11; i++) {
       linkArr2.push('https://starwars-visualguide.com/assets/img/planets/' + [i] + '.jpg')
     }
     return linkArr2
   }
   const allPhotos = makeArr()
+  console.log(allPhotos);
   
   // array of pairs: name - photo
   let pairs = {};

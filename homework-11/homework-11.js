@@ -1,5 +1,5 @@
 
-  export async function getRandomChinese(resultLength) {
+   async function getRandomChinese(resultLength) {
     let promise = () => new Promise((res) => { 
       setTimeout(function() {
         return res(convertToChinese())
