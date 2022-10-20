@@ -1,10 +1,10 @@
-const container = document.querySelector('.container')
-const grid = document.querySelector('.grid')
-
+ const container = document.querySelector('.container')
+ const grid = document.querySelector('.grid')
 
 // create 25 squares
 
   function createDivElement() {
+    let i = 0;
     for(i = 0; i < 25; i++) {
       const div = document.createElement('div');
       div.classList.add('block');
@@ -13,10 +13,7 @@ const grid = document.querySelector('.grid')
   }
   createDivElement()
 
-
-
-
-  function generateBlocksInterval() {
+ export function generateBlocksInterval() {
     function generateBlocks() {
       const randomColor = () => {
         let randomNum = (Math.random() * 0xfffff * 1000000).toString(16);
@@ -29,5 +26,5 @@ const grid = document.querySelector('.grid')
       generateBlocks()
     }, 1000)
   }
-  generateBlocksInterval()
+  // generateBlocksInterval()
 
