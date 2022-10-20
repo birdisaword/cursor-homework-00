@@ -36,13 +36,13 @@ const students = [{
     });
     return subj
   }
-  console.log(getSubjects(students[0]))
+  // console.log(getSubjects(students[0]))
 
 
 // 2 середню оцінку по усім предметам для переданого студента
 
 
-  function getAverageMark(obj) {
+ function getAverageMark(obj) {
     let marks = Object.values(obj.subjects)
     const mergedMarks = marks.flat()
     let sumOfMarks = mergedMarks.reduce((a, b) => a + b, 0); 
@@ -51,7 +51,7 @@ const students = [{
   return averageMark.toFixed(2)
   }
 
-console.log(getAverageMark(students[0]))
+// console.log(getAverageMark(students[0]))
 
 
 // 3 інформація загального виду по переданому студенту
@@ -60,7 +60,7 @@ console.log(getAverageMark(students[0]))
 // function displaySummary({ name, scores: { maths = 0, english = 0, science = 0 } })
 
 
-  function getStudentInfo({name, course, ...rest}) {
+ function getStudentInfo({name, course, ...rest}) {
 
     let studentsInfo = {
       name,
@@ -70,38 +70,38 @@ console.log(getAverageMark(students[0]))
   return studentsInfo
   }
 
-console.log(getStudentInfo(students[0]))
+// console.log(getStudentInfo(students[0]))
 
 
 
 // 4 імена студентів у алфавітному порядку
 
-  function getStudentsNames(arr) {
+ function getStudentsNames(arr) {
     const arrOfNames = arr.map((el) => el.name)
     return arrOfNames.sort()
   }
 
-console.log(getStudentsNames(students))
+// console.log(getStudentsNames(students))
 
 
 // 5 кращий студент зі списку по показнику середньої оцінки
 
-  function getBestStudent(arr) {
+ function getBestStudent(arr) {
     const allAverageMarks = [];
 
     for(let i = 0; i < arr.length; i++) {
       allAverageMarks.push(Number(getAverageMark(arr[i])))
     }
-    indexOfMaxMark = allAverageMarks.indexOf(Math.max(...allAverageMarks))
+     indexOfMaxMark = allAverageMarks.indexOf(Math.max(...allAverageMarks))
     return arr[indexOfMaxMark].name
   }
 
-console.log(getBestStudent(students))
+// console.log(getBestStudent(students))
 
 
-// 6 обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень
+// 6 об'єкт, в якому ключі це букви у слові, а значення – кількість їх повторень
 
-  function calculateWordLetters(str) {
+ export function calculateWordLetters(str) {
     const arrOfLetters = str.split('')
     const count = {};
 
@@ -112,4 +112,4 @@ console.log(getBestStudent(students))
   
   }
 
- console.log(calculateWordLetters('test'))
+//  console.log(calculateWordLetters('test'))

@@ -1,7 +1,7 @@
 
-const keys = document.querySelectorAll('.key');
+export const keys = document.querySelectorAll('.key');
 
-function playSound(e) {
+export function playSound(e) {
   const sound = document.querySelector(`audio[data-key="${e.key}"]`);
   const key = document.querySelector(`.key[data-key="${e.key}"]`);
   

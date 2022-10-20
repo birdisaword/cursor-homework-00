@@ -1,5 +1,5 @@
 // 1
-function getMaxDigit(number){
+export function getMaxDigit(number){
     const stringifiedNum = String(number);
     return Math.max(...stringifiedNum)
 }
@@ -51,9 +51,9 @@ function getRandomPassword(length = 8) {
 }
 
 
-document.writeln(`Функція №1: ${getMaxDigit(348534)} <br>`);
-document.writeln(`Функція №3: ${makeName('bubBaSmith')} <br>`);
-document.writeln(`Функція №4: ${(countSum(1000))} <br>`);
-document.writeln(`Функція №5: ${(getRandomNumber(1, 10))} <br>`);
-document.writeln(`Функція №7: ${(converter('2500uah'))} <br>`);
-document.writeln(`Функція №4: ${(getRandomPassword(5))} <br>`);
+// document.writeln(`Функція №1: ${getMaxDigit(348534)} <br>`);
+// document.writeln(`Функція №3: ${makeName('bubBaSmith')} <br>`);
+// document.writeln(`Функція №4: ${(countSum(1000))} <br>`);
+// document.writeln(`Функція №5: ${(getRandomNumber(1, 10))} <br>`);
+// document.writeln(`Функція №7: ${(converter('2500uah'))} <br>`);
+// document.writeln(`Функція №4: ${(getRandomPassword(5))} <br>`);

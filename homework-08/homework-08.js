@@ -1,6 +1,6 @@
 
 
-  class Student {
+   class Student {
     constructor(university, course, fullName, mark) {
       this.university = university;
       this.course = course;
@@ -39,7 +39,7 @@
     }
   }
     
-  let student1 = new Student('Вища Школа Психотерапії м.Одеса', '1', 'Остап Бендер', [4, 5, 4]);
+   export let student1 = new Student('Вища Школа Психотерапії м.Одеса', '1', 'Остап Бендер', [4, 5, 4]);
 
   student1.newMarks = 5;
   student1.newMarks = 3;
@@ -54,7 +54,7 @@
   student1.newMarks = 2;
   student1.newMarks = 3;
   
-  console.log('average mark: ' + student1.getAverageMark())
+  // console.log('average mark: ' + student1.getAverageMark())
 
-  console.log(student1.getInfo())
+  // console.log(student1.getInfo())
 

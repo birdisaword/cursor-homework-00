@@ -27,4 +27,3 @@
     }, 1000)
   }
   // generateBlocksInterval()
-
