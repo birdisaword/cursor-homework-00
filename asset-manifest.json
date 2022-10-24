@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/birdisaword/contacts-app/static/css/main.362fd06a.css",
+    "main.js": "/birdisaword/contacts-app/static/js/main.dc84029f.js",
+    "static/js/787.c45cc61a.chunk.js": "/birdisaword/contacts-app/static/js/787.c45cc61a.chunk.js",
+    "static/media/bg-image.png": "/birdisaword/contacts-app/static/media/bg-image.e263bfc155718caf5583.png",
+    "index.html": "/birdisaword/contacts-app/index.html",
+    "main.362fd06a.css.map": "/birdisaword/contacts-app/static/css/main.362fd06a.css.map",
+    "main.dc84029f.js.map": "/birdisaword/contacts-app/static/js/main.dc84029f.js.map",
+    "787.c45cc61a.chunk.js.map": "/birdisaword/contacts-app/static/js/787.c45cc61a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.362fd06a.css",
+    "static/js/main.dc84029f.js"
+  ]
+}
