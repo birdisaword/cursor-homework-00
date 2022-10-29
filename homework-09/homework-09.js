@@ -26,4 +26,4 @@
       generateBlocks()
     }, 1000)
   }
-  // generateBlocksInterval()
+  generateBlocksInterval()

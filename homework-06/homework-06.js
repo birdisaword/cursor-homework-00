@@ -36,7 +36,7 @@ const students = [{
     });
     return subj
   }
-  // console.log(getSubjects(students[0]))
+  console.log(getSubjects(students[0]))
 
 
 // 2 середню оцінку по усім предметам для переданого студента
@@ -51,7 +51,7 @@ const students = [{
   return averageMark.toFixed(2)
   }
 
-// console.log(getAverageMark(students[0]))
+console.log(getAverageMark(students[0]))
 
 
 // 3 інформація загального виду по переданому студенту
@@ -70,7 +70,7 @@ const students = [{
   return studentsInfo
   }
 
-// console.log(getStudentInfo(students[0]))
+console.log(getStudentInfo(students[0]))
 
 
 
@@ -81,7 +81,7 @@ const students = [{
     return arrOfNames.sort()
   }
 
-// console.log(getStudentsNames(students))
+console.log(getStudentsNames(students))
 
 
 // 5 кращий студент зі списку по показнику середньої оцінки
@@ -96,12 +96,12 @@ const students = [{
     return arr[indexOfMaxMark].name
   }
 
-// console.log(getBestStudent(students))
+console.log(getBestStudent(students))
 
 
 // 6 об'єкт, в якому ключі це букви у слові, а значення – кількість їх повторень
 
- export function calculateWordLetters(str) {
+  function calculateWordLetters(str) {
     const arrOfLetters = str.split('')
     const count = {};
 
@@ -112,4 +112,4 @@ const students = [{
   
   }
 
-//  console.log(calculateWordLetters('test'))
+ console.log(calculateWordLetters('test'))

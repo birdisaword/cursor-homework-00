@@ -1,7 +1,7 @@
 
 // 1 масив випадкових цілих чисел
 
-export function getRandomArray(length, min, max) {
+ function getRandomArray(length, min, max) {
     const numbers = [];
     
     for (let i = min; i <= length; i++) {
@@ -10,7 +10,7 @@ export function getRandomArray(length, min, max) {
     }
     return numbers;
   }
-// console.log(getRandomArray(14, 1, 10))
+console.log(getRandomArray(14, 1, 10))
 
 
 
@@ -42,7 +42,7 @@ export function getRandomArray(length, min, max) {
     }
     return highestValueKey
   }
-// console.log('mode: ' + getModa(1, 5, 3, 6.5, 8, 8.7, 8, 8, 44, 3))
+console.log('mode: ' + getModa(1, 5, 3, 6.5, 8, 8.7, 8, 8, 44, 3))
 
 
 // 3  середнє арифметичне всіх переданих аргументів
@@ -57,7 +57,7 @@ export function getRandomArray(length, min, max) {
     return averageNum
   }
 
-// console.log('average number: ' +  getAverage(2, 5, 3, 7, 8, 35, 2))
+console.log('average number: ' +  getAverage(2, 5, 3, 7, 8, 35, 2))
 
 
 // 4 медіана всіх переданих аргументів
@@ -78,7 +78,7 @@ export function getRandomArray(length, min, max) {
       }
       return median      
 }
-// console.log('median: ' + getMedian(43, 7, 25, 9, 8, 67, 14, 3))
+console.log('median: ' + getMedian(43, 7, 25, 9, 8, 67, 14, 3))
 
 
 // 6 кількість чисел більших 0
@@ -90,7 +90,7 @@ export function getRandomArray(length, min, max) {
     return positiveNums.length
   }
        
-// console.log('count of positive numbers: ' + countPositiveNumbers(-2, 6, 34, 6, -6, -7, 3, -9))
+console.log('count of positive numbers: ' + countPositiveNumbers(-2, 6, 34, 6, -6, -7, 3, -9))
 
 
 // 7 елементи, які діляться націло на 5
@@ -99,4 +99,4 @@ export function getRandomArray(length, min, max) {
     return numbers.filter(value => value % 5 === 0)
   }
 
-// console.log('divided by five: ' + getDividedByFive(5, 2, 7, 6, 9, 15))
+console.log('divided by five: ' + getDividedByFive(5, 2, 7, 6, 9, 15))

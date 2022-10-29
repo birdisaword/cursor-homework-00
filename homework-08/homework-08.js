@@ -54,7 +54,7 @@
   student1.newMarks = 2;
   student1.newMarks = 3;
   
-  // console.log('average mark: ' + student1.getAverageMark())
+  console.log('average mark: ' + student1.getAverageMark())
 
-  // console.log(student1.getInfo())
+  console.log(student1.getInfo())
 

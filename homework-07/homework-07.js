@@ -1,4 +1,4 @@
-export const ukraine = { tax: 0.195, middleSalary: 1789, vacancies: 11476 };
+const ukraine = { tax: 0.195, middleSalary: 1789, vacancies: 11476 };
 
 const latvia = { tax: 0.25, middleSalary: 1586, vacancies: 3921 };
 
@@ -10,7 +10,7 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
     return this.tax * salary; 
   }
 
-// console.log(getMyTaxes.call(litva, 1000))
+console.log(getMyTaxes.call(litva, 1000))
 
 
 // 2 скільки у середньому податків платятт IT-спеціалісти у кожній країні
@@ -19,7 +19,7 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
     return this.tax * this.middleSalary
   }
 
-// console.log(getMiddleTaxes.call(litva))
+console.log(getMiddleTaxes.call(litva))
 
 
 // 3 скільки всього податків платять IT-спеціалісти у кожній країні
@@ -28,7 +28,7 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
     return this.tax * this.middleSalary * this.vacancies
   }
 
-  // console.log(getTotalTaxes.call(ukraine))
+  console.log(getTotalTaxes.call(ukraine))
 
 
 // 4 об'єкт виду: { salary: number, taxes: number, profit: number } - кожні 10 секунд
@@ -51,7 +51,7 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
         }, 10000)
       
     }
-    // getMySalary(ukraine)
+    getMySalary(ukraine)
 
     function getRandomNumber(min, max) {
        const randomNum = Math.floor(Math.random() * (max - min)) + min;

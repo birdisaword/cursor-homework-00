@@ -8,7 +8,7 @@ const students = ["Олександр", "Ігор", "Олена", "Іра", "О�
 
 // pairs of students
 
-export function makePairs(arrOfPeople) {
+ function makePairs(arrOfPeople) {
     const sortedList = []
     const girls = []
     const boys = []
@@ -28,8 +28,7 @@ export function makePairs(arrOfPeople) {
     }
     return pairs;
    }
-  
-//  console.log(makePairs(students))
+ console.log(makePairs(students))
   
 
 // array - girl, boy and their theme
@@ -42,8 +41,7 @@ export function makePairs(arrOfPeople) {
     }
   return namesAndTheme;
   }
-
-  // console.log(makePairAndTheme(themes, makePairs(students)))
+  console.log(makePairAndTheme(themes, makePairs(students)))
 
 
 // students and their marks
@@ -57,7 +55,7 @@ export function makePairs(arrOfPeople) {
   return marked
   }
 
-// console.log(rateStudents(students, marks))
+console.log(rateStudents(students, marks))
 
  
 // pair of students, their theme and random mark
@@ -74,4 +72,4 @@ export function makePairs(arrOfPeople) {
     return fullInfo
   }
 
-// console.log(addFullInfo(makePairAndTheme(themes, makePairs(students))))
+console.log(addFullInfo(makePairAndTheme(themes, makePairs(students))))
