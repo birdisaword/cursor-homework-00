@@ -1,25 +1,48 @@
 
-
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: 'Courier New', Courier, monospace;
-color: white;
-  background: #152036;
+  color: white;
+  background: rgb(236, 236, 236);
   overflow-y: hidden;
 }
 
-#frame {
+@font-face {
+  font-family: SWfont;
+  src: url(Starjhol.ttf);
+}
+
+.wrapper {
+  width: 90%;
+  height: 85%;
+  margin: 2vh auto;
+  box-shadow: 8px 10px 40px #282a2e;
+  background: #30363e;
+}
+
+.name {
+  font-family: SWfont;
+  font-size: 80px;
+  text-align: center;
+  text-shadow: 10px 8px 14px #1b1c1d;
+  color: #fde814;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.characterFrame, #planetFrame {
     display:block; 
     margin: 2% auto; 
-    height:73%;
-    width: 65%;
-    background: #192b48;
+    max-height:45vh;
+    max-width: 90vh;
+    background: #3b434d;
     border: none;
     border-radius: 15px;
     overflow: scroll;
@@ -28,7 +51,6 @@ color: white;
 
 .charImg, .planetImg {
   border-radius: 50%;
-  /* border: solid red 3px; */
   width: 150px;
   height: 150px;
   float: left;
@@ -36,38 +58,69 @@ color: white;
   margin: 3%;
 }
 
-.charCard, .planetCard {
-  /* border: solid red 3px; */
-  /* align-items: center;  */
-  /* justify-content: left; */
-/* width: 90%; */
-  margin-top: 10%;
-/* transform: translateY(70%); */
+.planetImg {
+  margin: 3vh 5vh;
 }
 
-.get_info, .next {
-  width: 45%;
+.charCard {
+  margin-top: 10%;
+}
+
+.planetCard {
+  margin-top: 20%;
+}
+
+.go_back {
+  width: 46%;
   height: 100%;
   border-radius: 15px;
-  background: #192b48;
+  background: #3b434d;
   color: white;
   font-family: 'Courier New', Courier, monospace;
   border: none;
-
+  box-shadow: 2px 4px 4px #30363e;
+  margin: 0 26%;
 }
 
+.get_info, .next {
+  min-width: 19vh;
+  height: 100%;
+  border-radius: 15px;
+  background: #3b434d;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+}
 
-.buttons{
-  /* border: solid yellow; */
-  margin: 5% 35% 0;
+.get_info{
+  margin-right: 1vh;
+}
+
+.next{
+  margin-left: 1vh;
+}
+
+.get_info, .next {
+  box-shadow: 2px 4px 4px #30363e;
+}
+
+.get_info:hover, .next:hover, .go_back:hover {
+  box-shadow: 2px 4px 4px #41a3a6;
+}
+
+#buttons{
+  margin: 3% auto;
   height: 5%;
-  width: 30%
+  width: 40vh
 }
 
 .character {
-  /* border: solid yellow; */
-  /* height: 500px; */
   width: 90%;
   margin: auto 5%;
- float:left;
+  float:left;
+}
+
+.planets {
+  width:50%;
+  display: inline-block
 }

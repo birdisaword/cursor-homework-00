@@ -1,8 +1,29 @@
 let charIndex
 let arr = []
 
-async function generalInfo(moviePart) {
-  const movie = await fetch('https://swapi.dev/api/films/' + [moviePart] + '/')
+const showChar = document.createElement("button");
+showChar.className = "get_info"
+showChar.innerHTML = "show characters";
+document.getElementById("buttons").appendChild(showChar);
+
+const nextBtn = document.createElement("button");
+nextBtn.className = "next"
+nextBtn.innerHTML = "show planets";
+document.getElementById("buttons").appendChild(nextBtn);
+nextBtn.addEventListener('click', goNext)
+function goNext() {
+  window.open('./homework-12-page2.html','_self');
+};
+
+function showFrame() {
+  var element = document.getElementById("characterFrame");
+  element.classList.add("characterFrame");
+}
+
+showChar.addEventListener('click', showFrame)
+
+showChar.addEventListener('click', async () => {
+  const movie = await fetch(`https://swapi.dev/api/films/2/`)
   const response = await movie.json()
   const fullInfo = response.characters
   // arr with links of characters for the specific movie
@@ -12,7 +33,7 @@ async function generalInfo(moviePart) {
   function photoInd() {
     const photoLinks = []
     for(let i = 1; i <= 82; i++) {
-      photoLinks.push('https://starwars-visualguide.com/assets/img/characters/' + [i] + '.jpg');
+      photoLinks.push(`https://starwars-visualguide.com/assets/img/characters/${i}.jpg`);
     }
     return photoLinks
   }
@@ -22,7 +43,7 @@ async function generalInfo(moviePart) {
   function charInd() {
     const charLinks = []
     for (let i = 1; i <= 82; i++) {
-      charLinks.push('https://swapi.dev/api/people/' + [i] + '/')
+      charLinks.push(`https://swapi.dev/api/people/${i}/`)
     }
     return charLinks
   }
@@ -49,7 +70,8 @@ async function generalInfo(moviePart) {
       }
       const currPhoto = currentPhoto()
 
-      let frame = document.getElementById('frame')
+      let characterFrame = document.getElementById('characterFrame')
+
       let character = document.createElement('character')
           character.className = "character"
 
@@ -64,19 +86,10 @@ async function generalInfo(moviePart) {
            gender: ${el.gender}, 
            date: ${el.birth_year}`
 
-      frame.appendChild(character)
+      characterFrame.appendChild(character)
       character.appendChild(charImg)
       character.appendChild(charCard)
       
     })
   })
-}
-
-console.log(generalInfo(4));
-
-
-const nextBtn = document.querySelector('.next')
-nextBtn.addEventListener('click', goNext)
-function goNext() {
-  window.open('http://localhost:52330/homework-12/homework-12-page2.html','_self');
-};
+})
