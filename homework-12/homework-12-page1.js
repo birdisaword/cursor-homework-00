@@ -1,5 +1,3 @@
-let charIndex
-let arr = []
 
 const showChar = document.createElement("button");
 showChar.className = "get_info"
@@ -16,11 +14,13 @@ function goNext() {
 };
 
 function showFrame() {
-  var element = document.getElementById("characterFrame");
+  let element = document.getElementById("characterFrame");
   element.classList.add("characterFrame");
 }
-
 showChar.addEventListener('click', showFrame)
+
+let charIndex
+let arr = []
 
 showChar.addEventListener('click', async () => {
   const movie = await fetch(`https://swapi.dev/api/films/2/`)
