@@ -1,25 +1,22 @@
 
 import React from "react";
+import { formatDate } from './func'
 
-function formatDate(date) {
-  return date.toLocaleDateString();
-}
-
-function Post(props) {
+function Post({ author, date, content, image }) {
   return (
   <div className="post">
 
-  <img className="photo" src={props.author.photo} />
+  <img className="photo" src={author.photo} />
   <div className="user">
-    <div className="name"> {props.author.name} </div>
+    <div className="name"> {author.name} </div>
       <div className="info">
-        <div className="nickname"> {props.author.nickname} </div>
-        <div className="date"> {formatDate(props.date)} </div>
+        <div className="nickname"> {author.nickname} </div>
+        <div className="date"> {formatDate(date)} </div>
       </div>
   </div>
 
-  <div className="content"> {props.content} </div>
-  <img className="image" src={props.image} />
+  <div className="content"> {content} </div>
+  <img className="image" src={image} />
 
   </div>
 
