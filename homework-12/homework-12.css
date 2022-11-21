@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper {
-  width: 90%;
+  width: 65em;
   height: 85%;
   margin: 2vh auto;
   box-shadow: 8px 10px 40px #282a2e;
@@ -111,7 +111,7 @@ body {
 #buttons{
   margin: 3% auto;
   height: 5%;
-  width: 40vh
+  width: 45vh
 }
 
 .character {
