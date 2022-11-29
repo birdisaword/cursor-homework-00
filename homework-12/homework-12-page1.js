@@ -3,8 +3,9 @@ const showChar = document.querySelector('.get_info')
 const nextBtn = document.querySelector('.next')
 
 function showFrame() {
-  let element = document.getElementById("characterFrame");
-  element.classList.add("characterFrame");
+  let element = document.getElementById("characterFrame")
+  element.classList.add("characterFrame")
+  return element
 }
 showChar.addEventListener('click', showFrame)
 
@@ -45,7 +46,7 @@ showChar.addEventListener('click', async () => {
   charIndexArr.forEach((el, i) => {
     charAndPhoto[el] = photoIndexArr[i]
   })
-
+console.log(charIndexArr);
 
   const charResponse = await Promise.all(
     link.map(url => fetch(url).then(res => res.json())))
